@@ -1,0 +1,48 @@
+<%= form_with(model: list, local: true) do |form| %>
+  <% if list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      
+      <link rel="stylesheet" type="text/css" href="CSS.css">
+<style type="text/css">  
+body 
+{  
+background-image: url(https://news.marvel.com/wp-content/uploads/sites/28/2016/10/57ed72cbc3d2c.jpg);
+background-size: 100%;
+background-repeat: no-repeat
+}
+</style> 
+  
+</body> 
+      
+      
+      
+      
+      <ul>
+      <% list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :name, id: :list_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Last_Name %>
+    <%= form.text_field :lastname, id: :list_lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Phone %>
+    <%= form.text_area :phone, id: :list_phone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
