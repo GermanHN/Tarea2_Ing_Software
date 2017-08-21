@@ -1,0 +1,32 @@
+<%= form_with(model: registro_maestro, local: true) do |form| %>
+  <% if registro_maestro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(registro_maestro.errors.count, "error") %> prohibited this registro_maestro from being saved:</h2>
+
+      <ul>
+      <% registro_maestro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :registro_maestro_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cuenta %>
+    <%= form.text_field :cuenta, id: :registro_maestro_cuenta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area %>
+    <%= form.text_field :area, id: :registro_maestro_area %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

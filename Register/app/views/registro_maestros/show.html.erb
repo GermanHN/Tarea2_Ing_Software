@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @registro_maestro.nombre %>
+</p>
+
+<p>
+  <strong>Cuenta:</strong>
+  <%= @registro_maestro.cuenta %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @registro_maestro.area %>
+</p>
+
+<%= link_to 'Edit', edit_registro_maestro_path(@registro_maestro) %> |
+<%= link_to 'Back', registro_maestros_path %>

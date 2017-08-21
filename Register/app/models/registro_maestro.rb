@@ -1,0 +1,2 @@
+class RegistroMaestro < ApplicationRecord
+end

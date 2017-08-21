@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Registro Maestros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Cuenta</th>
+      <th>Area</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registro_maestros.each do |registro_maestro| %>
+      <tr>
+        <td><%= registro_maestro.nombre %></td>
+        <td><%= registro_maestro.cuenta %></td>
+        <td><%= registro_maestro.area %></td>
+        <td><%= link_to 'Show', registro_maestro %></td>
+        <td><%= link_to 'Edit', edit_registro_maestro_path(registro_maestro) %></td>
+        <td><%= link_to 'Destroy', registro_maestro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registro Maestro', new_registro_maestro_path %>
